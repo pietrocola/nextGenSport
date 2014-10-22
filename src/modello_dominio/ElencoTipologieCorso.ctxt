@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=nomeTip
+comment0.target=void\ impostaTipologia(java.lang.String)
+comment0.text=\r\n\ \r\n\ @param\ nomeTip\r\n
+comment1.params=tc
+comment1.target=void\ addTipologia(TipologiaCorso)
+comment1.text=\r\n\ \r\n\ @param\ tc\r\n
+comment2.params=
+comment2.target=java.lang.String[]\ getNomeTipologie()
+comment3.params=nomeTip
+comment3.target=TipologiaCorso\ getTipologia(java.lang.String)
+comment3.text=\r\n\ \r\n\ @param\ nomeTip\r\n
+numComments=4

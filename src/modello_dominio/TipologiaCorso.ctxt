@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TipologiaCorso()
+comment1.params=n
+comment1.target=TipologiaCorso(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getNome()
+comment3.params=n
+comment3.target=void\ setNome(java.lang.String)
+numComments=4

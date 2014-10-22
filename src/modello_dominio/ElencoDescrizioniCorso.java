@@ -1,20 +1,26 @@
 package modello_dominio;
 
 import modello_dominio.*;
+import java.util.ArrayList;
 
 public class ElencoDescrizioniCorso {
 
 	private DescrizioneCorso[] descrizioni;
 
+	public ElencoDescrizioniCorso()
+	{
+		ArrayList<DescrizioneCorso> descrizioni = new ArrayList<DescrizioneCorso>();
+	}
+	
 	/**
 	 * 
 	 * @param nomeCorso
 	 * @param tip
 	 * @param prenot
 	 */
-	public void configuraCorso(String nomeCorso, TipologiaCorso tip, boolean prenot) {
-		// TODO - implement ElencoDescrizioniCorso.configuraCorso
-		throw new UnsupportedOperationException();
+	public void configuraCorso(String nomeCorso, TipologiaCorso tip, boolean prenot) 
+	{
+		
 	}
 
 	/**

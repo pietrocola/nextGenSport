@@ -6,6 +6,10 @@ public class ElencoTipologieCorso {
 
 	private TipologiaCorso[] tipologie;
 
+	public ElencoTipologieCorso()
+	{
+		
+	}
 	/**
 	 * 
 	 * @param nomeTip

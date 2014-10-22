@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nomeCorso\ tip\ prenot
+comment0.target=void\ configuraCorso(java.lang.String,\ TipologiaCorso,\ boolean)
+comment0.text=\r\n\ \r\n\ @param\ nomeCorso\r\n\ @param\ tip\r\n\ @param\ prenot\r\n
+comment1.params=dc
+comment1.target=void\ addDescrizione(DescrizioneCorso)
+comment1.text=\r\n\ \r\n\ @param\ dc\r\n
+numComments=2
