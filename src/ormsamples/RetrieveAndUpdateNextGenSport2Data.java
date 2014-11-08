@@ -7,20 +7,20 @@ package ormsamples;
 import org.orm.*;
 public class RetrieveAndUpdateNextGenSport2Data {
 	public void retrieveAndUpdateTestData() throws PersistentException {
-		PersistentTransaction t = model.NextGenSport2PersistentManager.instance().getSession().beginTransaction();
+		PersistentTransaction t = peristentmodel.NextGenSport2PersistentManager.instance().getSession().beginTransaction();
 		try {
-			model.ElencoTipologieCorso lmodelElencoTipologieCorso = model.ElencoTipologieCorsoDAO.loadElencoTipologieCorsoByQuery(null, null);
+			peristentmodel.ElencoTipologieCorso lperistentmodelElencoTipologieCorso = peristentmodel.ElencoTipologieCorsoDAO.loadElencoTipologieCorsoByQuery(null, null);
 			// Update the properties of the persistent object
-			model.ElencoTipologieCorsoDAO.save(lmodelElencoTipologieCorso);
-			model.TipologiaCorso lmodelTipologiaCorso = model.TipologiaCorsoDAO.loadTipologiaCorsoByQuery(null, null);
+			peristentmodel.ElencoTipologieCorsoDAO.save(lperistentmodelElencoTipologieCorso);
+			peristentmodel.TipologiaCorso lperistentmodelTipologiaCorso = peristentmodel.TipologiaCorsoDAO.loadTipologiaCorsoByQuery(null, null);
 			// Update the properties of the persistent object
-			model.TipologiaCorsoDAO.save(lmodelTipologiaCorso);
-			model.DescrizioneCorso lmodelDescrizioneCorso = model.DescrizioneCorsoDAO.loadDescrizioneCorsoByQuery(null, null);
+			peristentmodel.TipologiaCorsoDAO.save(lperistentmodelTipologiaCorso);
+			peristentmodel.DescrizioneCorso lperistentmodelDescrizioneCorso = peristentmodel.DescrizioneCorsoDAO.loadDescrizioneCorsoByQuery(null, null);
 			// Update the properties of the persistent object
-			model.DescrizioneCorsoDAO.save(lmodelDescrizioneCorso);
-			model.ElencoDescrizioniCorso lmodelElencoDescrizioniCorso = model.ElencoDescrizioniCorsoDAO.loadElencoDescrizioniCorsoByQuery(null, null);
+			peristentmodel.DescrizioneCorsoDAO.save(lperistentmodelDescrizioneCorso);
+			peristentmodel.ElencoDescrizioniCorso lperistentmodelElencoDescrizioniCorso = peristentmodel.ElencoDescrizioniCorsoDAO.loadElencoDescrizioniCorsoByQuery(null, null);
 			// Update the properties of the persistent object
-			model.ElencoDescrizioniCorsoDAO.save(lmodelElencoDescrizioniCorso);
+			peristentmodel.ElencoDescrizioniCorsoDAO.save(lperistentmodelElencoDescrizioniCorso);
 			t.commit();
 		}
 		catch (Exception e) {
@@ -31,28 +31,28 @@ public class RetrieveAndUpdateNextGenSport2Data {
 	
 	public void retrieveByCriteria() throws PersistentException {
 		System.out.println("Retrieving ElencoTipologieCorso by ElencoTipologieCorsoCriteria");
-		model.ElencoTipologieCorsoCriteria lmodelElencoTipologieCorsoCriteria = new model.ElencoTipologieCorsoCriteria();
+		peristentmodel.ElencoTipologieCorsoCriteria lperistentmodelElencoTipologieCorsoCriteria = new peristentmodel.ElencoTipologieCorsoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//lmodelElencoTipologieCorsoCriteria.ID.eq();
-		System.out.println(lmodelElencoTipologieCorsoCriteria.uniqueElencoTipologieCorso());
+		//lperistentmodelElencoTipologieCorsoCriteria.ID.eq();
+		System.out.println(lperistentmodelElencoTipologieCorsoCriteria.uniqueElencoTipologieCorso());
 		
 		System.out.println("Retrieving TipologiaCorso by TipologiaCorsoCriteria");
-		model.TipologiaCorsoCriteria lmodelTipologiaCorsoCriteria = new model.TipologiaCorsoCriteria();
+		peristentmodel.TipologiaCorsoCriteria lperistentmodelTipologiaCorsoCriteria = new peristentmodel.TipologiaCorsoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//lmodelTipologiaCorsoCriteria.nome.eq();
-		System.out.println(lmodelTipologiaCorsoCriteria.uniqueTipologiaCorso());
+		//lperistentmodelTipologiaCorsoCriteria.nometip.eq();
+		System.out.println(lperistentmodelTipologiaCorsoCriteria.uniqueTipologiaCorso());
 		
 		System.out.println("Retrieving DescrizioneCorso by DescrizioneCorsoCriteria");
-		model.DescrizioneCorsoCriteria lmodelDescrizioneCorsoCriteria = new model.DescrizioneCorsoCriteria();
+		peristentmodel.DescrizioneCorsoCriteria lperistentmodelDescrizioneCorsoCriteria = new peristentmodel.DescrizioneCorsoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//lmodelDescrizioneCorsoCriteria.nome.eq();
-		System.out.println(lmodelDescrizioneCorsoCriteria.uniqueDescrizioneCorso());
+		//lperistentmodelDescrizioneCorsoCriteria.nomedesc.eq();
+		System.out.println(lperistentmodelDescrizioneCorsoCriteria.uniqueDescrizioneCorso());
 		
 		System.out.println("Retrieving ElencoDescrizioniCorso by ElencoDescrizioniCorsoCriteria");
-		model.ElencoDescrizioniCorsoCriteria lmodelElencoDescrizioniCorsoCriteria = new model.ElencoDescrizioniCorsoCriteria();
+		peristentmodel.ElencoDescrizioniCorsoCriteria lperistentmodelElencoDescrizioniCorsoCriteria = new peristentmodel.ElencoDescrizioniCorsoCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
-		//lmodelElencoDescrizioniCorsoCriteria.ID.eq();
-		System.out.println(lmodelElencoDescrizioniCorsoCriteria.uniqueElencoDescrizioniCorso());
+		//lperistentmodelElencoDescrizioniCorsoCriteria.ID.eq();
+		System.out.println(lperistentmodelElencoDescrizioniCorsoCriteria.uniqueElencoDescrizioniCorso());
 		
 	}
 	
@@ -65,7 +65,7 @@ public class RetrieveAndUpdateNextGenSport2Data {
 				//retrieveAndUpdateNextGenSport2Data.retrieveByCriteria();
 			}
 			finally {
-				model.NextGenSport2PersistentManager.instance().disposePersistentManager();
+				peristentmodel.NextGenSport2PersistentManager.instance().disposePersistentManager();
 			}
 		}
 		catch (Exception e) {

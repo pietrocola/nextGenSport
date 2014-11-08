@@ -7,20 +7,20 @@ package ormsamples;
 import org.orm.*;
 public class CreateNextGenSport2Data {
 	public void createTestData() throws PersistentException {
-		PersistentTransaction t = model.NextGenSport2PersistentManager.instance().getSession().beginTransaction();
+		PersistentTransaction t = peristentmodel.NextGenSport2PersistentManager.instance().getSession().beginTransaction();
 		try {
-			model.ElencoTipologieCorso lmodelElencoTipologieCorso = model.ElencoTipologieCorsoDAO.createElencoTipologieCorso();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : elencocorsi
-			model.ElencoTipologieCorsoDAO.save(lmodelElencoTipologieCorso);
-			model.TipologiaCorso lmodelTipologiaCorso = model.TipologiaCorsoDAO.createTipologiaCorso();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : nome
-			model.TipologiaCorsoDAO.save(lmodelTipologiaCorso);
-			model.DescrizioneCorso lmodelDescrizioneCorso = model.DescrizioneCorsoDAO.createDescrizioneCorso();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : prenotazione, tipologiaCorso, nome
-			model.DescrizioneCorsoDAO.save(lmodelDescrizioneCorso);
-			model.ElencoDescrizioniCorso lmodelElencoDescrizioniCorso = model.ElencoDescrizioniCorsoDAO.createElencoDescrizioniCorso();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : elencocorsi
-			model.ElencoDescrizioniCorsoDAO.save(lmodelElencoDescrizioniCorso);
+			peristentmodel.ElencoTipologieCorso lperistentmodelElencoTipologieCorso = peristentmodel.ElencoTipologieCorsoDAO.createElencoTipologieCorso();
+			// Initialize the properties of the persistent object here
+			peristentmodel.ElencoTipologieCorsoDAO.save(lperistentmodelElencoTipologieCorso);
+			peristentmodel.TipologiaCorso lperistentmodelTipologiaCorso = peristentmodel.TipologiaCorsoDAO.createTipologiaCorso();
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : nometip
+			peristentmodel.TipologiaCorsoDAO.save(lperistentmodelTipologiaCorso);
+			peristentmodel.DescrizioneCorso lperistentmodelDescrizioneCorso = peristentmodel.DescrizioneCorsoDAO.createDescrizioneCorso();
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : prenotazione, nomedesc
+			peristentmodel.DescrizioneCorsoDAO.save(lperistentmodelDescrizioneCorso);
+			peristentmodel.ElencoDescrizioniCorso lperistentmodelElencoDescrizioniCorso = peristentmodel.ElencoDescrizioniCorsoDAO.createElencoDescrizioniCorso();
+			// Initialize the properties of the persistent object here
+			peristentmodel.ElencoDescrizioniCorsoDAO.save(lperistentmodelElencoDescrizioniCorso);
 			t.commit();
 		}
 		catch (Exception e) {
@@ -36,7 +36,7 @@ public class CreateNextGenSport2Data {
 				createNextGenSport2Data.createTestData();
 			}
 			finally {
-				model.NextGenSport2PersistentManager.instance().disposePersistentManager();
+				peristentmodel.NextGenSport2PersistentManager.instance().disposePersistentManager();
 			}
 		}
 		catch (Exception e) {

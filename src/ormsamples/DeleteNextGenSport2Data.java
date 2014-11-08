@@ -7,20 +7,20 @@ package ormsamples;
 import org.orm.*;
 public class DeleteNextGenSport2Data {
 	public void deleteTestData() throws PersistentException {
-		PersistentTransaction t = model.NextGenSport2PersistentManager.instance().getSession().beginTransaction();
+		PersistentTransaction t = peristentmodel.NextGenSport2PersistentManager.instance().getSession().beginTransaction();
 		try {
-			model.ElencoTipologieCorso lmodelElencoTipologieCorso = model.ElencoTipologieCorsoDAO.loadElencoTipologieCorsoByQuery(null, null);
+			peristentmodel.ElencoTipologieCorso lperistentmodelElencoTipologieCorso = peristentmodel.ElencoTipologieCorsoDAO.loadElencoTipologieCorsoByQuery(null, null);
 			// Delete the persistent object
-			model.ElencoTipologieCorsoDAO.delete(lmodelElencoTipologieCorso);
-			model.TipologiaCorso lmodelTipologiaCorso = model.TipologiaCorsoDAO.loadTipologiaCorsoByQuery(null, null);
+			peristentmodel.ElencoTipologieCorsoDAO.delete(lperistentmodelElencoTipologieCorso);
+			peristentmodel.TipologiaCorso lperistentmodelTipologiaCorso = peristentmodel.TipologiaCorsoDAO.loadTipologiaCorsoByQuery(null, null);
 			// Delete the persistent object
-			model.TipologiaCorsoDAO.delete(lmodelTipologiaCorso);
-			model.DescrizioneCorso lmodelDescrizioneCorso = model.DescrizioneCorsoDAO.loadDescrizioneCorsoByQuery(null, null);
+			peristentmodel.TipologiaCorsoDAO.delete(lperistentmodelTipologiaCorso);
+			peristentmodel.DescrizioneCorso lperistentmodelDescrizioneCorso = peristentmodel.DescrizioneCorsoDAO.loadDescrizioneCorsoByQuery(null, null);
 			// Delete the persistent object
-			model.DescrizioneCorsoDAO.delete(lmodelDescrizioneCorso);
-			model.ElencoDescrizioniCorso lmodelElencoDescrizioniCorso = model.ElencoDescrizioniCorsoDAO.loadElencoDescrizioniCorsoByQuery(null, null);
+			peristentmodel.DescrizioneCorsoDAO.delete(lperistentmodelDescrizioneCorso);
+			peristentmodel.ElencoDescrizioniCorso lperistentmodelElencoDescrizioniCorso = peristentmodel.ElencoDescrizioniCorsoDAO.loadElencoDescrizioniCorsoByQuery(null, null);
 			// Delete the persistent object
-			model.ElencoDescrizioniCorsoDAO.delete(lmodelElencoDescrizioniCorso);
+			peristentmodel.ElencoDescrizioniCorsoDAO.delete(lperistentmodelElencoDescrizioniCorso);
 			t.commit();
 		}
 		catch (Exception e) {
@@ -36,7 +36,7 @@ public class DeleteNextGenSport2Data {
 				deleteNextGenSport2Data.deleteTestData();
 			}
 			finally {
-				model.NextGenSport2PersistentManager.instance().disposePersistentManager();
+				peristentmodel.NextGenSport2PersistentManager.instance().disposePersistentManager();
 			}
 		}
 		catch (Exception e) {

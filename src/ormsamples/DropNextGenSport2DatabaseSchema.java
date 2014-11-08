@@ -11,8 +11,8 @@ public class DropNextGenSport2DatabaseSchema {
 			System.out.println("Are you sure to drop table(s)? (Y/N)");
 			java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
 			if (reader.readLine().trim().toUpperCase().equals("Y")) {
-				ORMDatabaseInitiator.dropSchema(model.NextGenSport2PersistentManager.instance());
-				model.NextGenSport2PersistentManager.instance().disposePersistentManager();
+				ORMDatabaseInitiator.dropSchema(peristentmodel.NextGenSport2PersistentManager.instance());
+				peristentmodel.NextGenSport2PersistentManager.instance().disposePersistentManager();
 			}
 			
 		}

@@ -4,14 +4,21 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
+import org.orm.PersistentException;
+
+import peristentmodel.TipologiaCorso;
+import peristentmodel.TipologiaCorsoDAO;
+
 public class interfaccia {
 
 	private JFrame frame;
 
 	/**
 	 * Launch the application.
+	 * @throws PersistentException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws PersistentException {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -22,8 +29,25 @@ public class interfaccia {
 				}
 			}
 		});
+		
+		
+		/*
+		TipologiaCorso tip = new TipologiaCorso("prova");
+		//TipologiaCorsoDAO tp=new TipologiaCorsoDAO();
+		//tip=tp.getTipologiaCorsoByORMID("sala");
+		
+		boolean aux;
+		TipologiaCorsoDAO tp=new TipologiaCorsoDAO();
+		aux=tp.save(tip);
+		
+	    //System.out.print(tip.getNometip());
+	     */
 	}
 
+	
+	
+	
+	
 	/**
 	 * Create the application.
 	 */

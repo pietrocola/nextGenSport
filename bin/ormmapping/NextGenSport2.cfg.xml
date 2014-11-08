@@ -17,9 +17,9 @@ License Type: Academic
 		<property name="show_sql">false</property>
 		<property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
 		<!-- mapping files -->
-		<mapping resource="ormmapping/model/DescrizioneCorso.hbm.xml" />
-		<mapping resource="ormmapping/model/ElencoDescrizioniCorso.hbm.xml" />
-		<mapping resource="ormmapping/model/ElencoTipologieCorso.hbm.xml" />
-		<mapping resource="ormmapping/model/TipologiaCorso.hbm.xml" />
+		<mapping resource="ormmapping/peristentmodel/DescrizioneCorso.hbm.xml" />
+		<mapping resource="ormmapping/peristentmodel/ElencoDescrizioniCorso.hbm.xml" />
+		<mapping resource="ormmapping/peristentmodel/ElencoTipologieCorso.hbm.xml" />
+		<mapping resource="ormmapping/peristentmodel/TipologiaCorso.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
