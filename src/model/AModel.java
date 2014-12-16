@@ -1,15 +1,15 @@
 package model;
 
+import org.orm.PersistentException;
+
 import peristentmodel.*;
 
 public abstract class AModel {
 
 	APersistentModel model;
-
-	public APersistentModel getPersistentModel() {
-		// TODO - implement AModel.getPersistentModel
+	
+	public abstract APersistentModel getPersistentModel();
 		
-		throw new UnsupportedOperationException();
-	}
-
+	public abstract void setPersistentModel(APersistentModel model);
+	
 }

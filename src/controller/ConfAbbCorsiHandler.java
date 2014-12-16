@@ -2,6 +2,9 @@ package controller;
 
 import java.util.ArrayList;
 
+import org.orm.PersistentException;
+
+import peristentmodel.TipologiaCorso;
 import model.*;
 
 public class ConfAbbCorsiHandler {
@@ -10,28 +13,31 @@ public class ConfAbbCorsiHandler {
 	M_ElencoDescrizioniCorso elencodesc;
 
 	
-	
+	/**
+	 * inizializza la classe M_ElencoTipologieCorso	
+	 * @return
+	 */
+	public M_ElencoTipologieCorso inizializzaElenco()
+	{
+		return elencotip = new M_ElencoTipologieCorso(); //in caso d'uso di avviamento
+	}
 	
 	/**
 	 * 
 	 * @param nomeTip
+	 * @throws PersistentException 
 	 */
-	public void impostaTipologiaCorso(String nomeTip) {
-		// TODO - implement ConfAbbCorsiHandler.impostaTipologiaCorso
-		
-		elencotip.impostaTipologiaCorso(nomeTip);
-		
-		
-		throw new UnsupportedOperationException();
+	public boolean impostaTipologiaCorso(String nomeTip) throws PersistentException {
+				
+		inizializzaElenco();
+		return elencotip.memorizza(nomeTip);		
 	}
 
 	
 	
-	public ArrayList<String> getNomeTipologie() {
-		// TODO - implement ConfAbbCorsiHandler.getNomeTipologie
-		ArrayList<String> aux = new ArrayList<String>();
-		
-		aux=elencotip.getNomeTipologie();
+	public ArrayList<TipologiaCorso> getNomeTipologie() throws PersistentException {
+		inizializzaElenco();
+		ArrayList<TipologiaCorso> aux = elencotip.getNomeTipologie();
 		return aux;
 		
 		//throw new UnsupportedOperationException();
@@ -40,12 +46,19 @@ public class ConfAbbCorsiHandler {
 	/**
 	 * 
 	 * @param nomeCorso
+	 * @param i 
 	 * @param prenot
-	 * @param nomeTip
+	 * @param object
+	 * @return 
+	 * @throws PersistentException 
 	 */
-	public void configuraCorso(String nomeCorso, boolean prenot, String nomeTip) {
-		// TODO - implement ConfAbbCorsiHandler.configuraCorso
-		throw new UnsupportedOperationException();
+	public boolean configuraCorso(String nomeCorso, boolean i, TipologiaCorso string) throws PersistentException {
+		//inizializzaElenco();
+		//TipologiaCorso tc = elencotip.getTipologia(nomeTip);
+		M_DescrizioneCorso dc = new M_DescrizioneCorso();
+		return dc.memorizza(nomeCorso, i, string);
+				
+		//return elencodesc.configuraCorso(nomeCorso, nomeTip, prenot);
 	}
-
+	
 }

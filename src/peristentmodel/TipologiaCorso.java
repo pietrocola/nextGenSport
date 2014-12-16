@@ -15,6 +15,7 @@ package peristentmodel;
 
 public class TipologiaCorso extends peristentmodel.APersistentModel {
 	public TipologiaCorso() {
+		
 	}
 	
 	public boolean equals(Object aObj) {

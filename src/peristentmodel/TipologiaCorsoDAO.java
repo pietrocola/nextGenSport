@@ -330,4 +330,6 @@ public class TipologiaCorsoDAO {
 	public static TipologiaCorso[] listTipologiaCorsoByCriteria(TipologiaCorsoCriteria tipologiaCorsoCriteria) {
 		return tipologiaCorsoCriteria.listTipologiaCorso();
 	}
+
+	
 }
